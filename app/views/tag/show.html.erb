@@ -1,0 +1,28 @@
+
+<div class="tagpage">
+  <div class="col-sm-4 col-sm-offset-4">
+
+  <div id="taggedposts">
+<h1>posts tagged as <%= @tag.name %></h1>
+<hr>
+<% if @users.count > 0 %>
+
+
+  
+  <% @users.each do |post| %>
+
+    <p><%= link_to user.username, user_path(user) %></p>
+
+  <% end %>
+
+
+
+<% else %>
+
+  <p>this tag is not associated with any posts.</p>
+
+<% end %>
+</div>
+
+</div>
+</div>

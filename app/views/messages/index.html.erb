@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3 first">
+    <div class="thumbnail">
+     <% count = 1 %>
+     <% current_user.messages.each do |message| %> 
+     <% if count % 4 == 1 %> 
+     <p>From:<%= message.from %></p>
+     <p>To:<%= message.to %></p>
+     <p>Title:<%= message.title %><br></p>
+     <p>Body:<%= message.body %></p>
+     <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary" %></p>
+     <% end %>
+
+     <% count += 1 %>
+     <% end %> 
+   </div>
+ </div>
+   
+
+   <div class="col-xs-3 first">
+    <div class="thumbnail">
+     <% count = 1 %>
+     <% current_user.messages.each do |message| %> 
+     <% if count % 4 == 2 %> 
+     <p>From:<%= message.from %></p>
+     <p>To:<%= message.to %></p>
+     <p>Title:<%= message.title %><br></p>
+     <p>Body:<%= message.body %></p>
+     <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary" %></p>
+     <% end %>
+
+     <% count += 1 %>
+     <% end %> 
+   </div>
+ </div>
+
+ <div class="col-xs-3 first">
+  <div class="thumbnail">
+   <% count = 1 %>
+   <% current_user.messages.each do |message| %> 
+
+   <% if count % 4 == 3 %> 
+   <p>From:<%= message.from %></p>
+   <p>To:<%= message.to %></p>
+   <p>Title:<%= message.title %><br></p>
+   <p>Body:<%= message.body %></p>
+   <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary" %></p>
+   <% end %>
+
+   <% count += 1 %>
+   <% end %> 
+ </div>
+</div>
+
+<div class="col-xs-3 first">
+  <div class="thumbnail">
+   <% count = 1 %>
+   <% current_user.messages.each do |message| %> 
+   <% if count % 4 == 0 %> 
+   <p>From:<%= message.from %></p>
+   <p>To:<%= message.to %></p>
+   <p>Title:<%= message.title %><br></p>
+   <p>Body:<%= message.body %></p>
+   <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary"%></p>
+   <% end %>
+
+   <% count += 1 %>
+   <% end %> 
+ </div>
+</div>
+
+</div>
+</div>
